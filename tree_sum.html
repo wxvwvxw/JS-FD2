@@ -7,13 +7,15 @@
 <body>
 <script>
 
+'use strict'
+
 var new_array = [4, 2, 6, [3, 4],3, 5];
 
 function tree_sum (array) {
 
     var n = 0;
 
-    for (i = 0; i < array.length; i++) {
+    for (var i = 0; i < array.length; i++) {
         
         if(typeof array[i] == 'object') {
            n += tree_sum(array[i]);
