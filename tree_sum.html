@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Курс по Javascript</title>
+</head>
+<body>
+<script>
+
+var new_array = [4, 2, 6, [3, 4],3, 5];
+
+function tree_sum (array) {
+
+    var n = 0;
+
+    for (i = 0; i < array.length; i++) {
+        
+        if(typeof array[i] == 'object') {
+            tree_sum(array[i]);
+        }
+        
+        
+         n += array[i];
+               
+    }
+
+return n; 
+
+}
+
+document.write(tree_sum(new_array));
+
+
+
+/*
+ Разработать «чистую» функцию treeSum, которая получает массив, элементы которого могут быть числами или снова массивами, и так до любого уровня.
+Функция должна рассчитать и вернуть сумму всех числовых элементов массива со всех уровней.
+Проверить работу функции можно на следующем массиве (сумма 50):
+
+      [ 5, 7, 
+        [ 4, [2], 8, [1,3], 2 ], 
+        [ 9, [] ], 
+        1, 8
+      ]
+*/
+
+</script>
+</body>
+</html>
