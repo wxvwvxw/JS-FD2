@@ -16,9 +16,8 @@ function tree_sum (array) {
     for (i = 0; i < array.length; i++) {
         
         if(typeof array[i] == 'object') {
-            tree_sum(array[i]);
+           n += tree_sum(array[i]);
         }
-        
         
          n += array[i];
                
