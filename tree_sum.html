@@ -20,8 +20,9 @@ function tree_sum (array) {
         if(typeof array[i] == 'object') {
            n += tree_sum(array[i]);
         }
-        
+        else {
          n += array[i];
+        }
                
     }
 
