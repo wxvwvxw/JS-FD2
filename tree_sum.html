@@ -9,7 +9,11 @@
 
 'use strict'
 
-var new_array = [4, 2, 6, [3, 4],3, 5];
+var new_array = [ 5, 7, 
+        [ 4, [2], 8, [1,3], 2 ], 
+        [ 9, [] ], 
+        1, 8
+      ];
 
 function tree_sum (array) {
 
@@ -30,7 +34,7 @@ return n;
 
 }
 
-document.write(tree_sum(new_array));
+console.log(tree_sum(new_array));
 
 
 /*
