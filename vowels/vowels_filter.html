@@ -19,13 +19,13 @@ function vowels(words) {
        return (v in rus_vowels)
    }
    
-   console.log(user_words
-       .split('')
-       .filter(is_vowels)
-       .length);
+   return words
+            .split('')
+            .filter(is_vowels)
+            .length;
 }
 
-vowels(user_words);
+console.log(vowels(user_words));
 
     </script>
 </body>
