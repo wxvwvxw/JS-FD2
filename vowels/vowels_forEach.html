@@ -13,6 +13,7 @@
    
 function vowels(words) {
     var rus_vowels = {'а':1, 'е':1, 'ё':1, 'и':1, 'й':1, 'о':1, 'у':1, 'э':1, 'ю':1, 'я':1};
+    var new_words = words.toLowerCase();
     var n = 0;
 
     function vowels_count(v) {  
@@ -21,7 +22,7 @@ function vowels(words) {
       }
     }
 
-    words
+    new_words
     .split('')
     .forEach(vowels_count);
 

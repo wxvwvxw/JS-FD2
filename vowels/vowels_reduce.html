@@ -14,6 +14,7 @@
 function vowels(words) { 
     
     var rus_vowels = {'а':1, 'е':1, 'ё':1, 'и':1, 'й':1, 'о':1, 'у':1, 'э':1, 'ю':1, 'я':1};
+    var new_words = words.toLowerCase();
 
     function is_vowels(r,v) { 
         if(v in rus_vowels) {
@@ -22,7 +23,7 @@ function vowels(words) {
         return r;
     }
 
-    return words
+    return new_words
       .split('')
       .reduce(is_vowels,0);
 }
