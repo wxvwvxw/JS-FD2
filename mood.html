@@ -15,19 +15,17 @@
 
     function mood(colorsCount) {
         var colors=[ '', 'красный', 'оранжевый', 'жёлтый', 'зелёный', 'голубой', 'синий', 'фиолетовый' ];
-        var used = {};
+        
         console.log( 'цветов: ' + colorsCount );
-
+        var used = {};
         for ( var i=1; i<=colorsCount; i++ ) {
-            var n=randomDiap(1,7);
-            var colorName=colors[n];
-            if(colorName in used) {
-                continue;
-            }
-            else {
-                used[colorName]=true;
+            do {
+                var n=randomDiap(1,7);
+            } 
+            while(n in used)
+                used[n]=true;
+                var colorName=colors[n];
                 console.log( colorName );
-            }
         }        
     }
 
