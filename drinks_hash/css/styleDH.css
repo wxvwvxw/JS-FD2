@@ -1,0 +1,27 @@
+
+body {
+    background-color:#CBD0FC;
+}
+
+div {
+    
+    outline: solid 0px gray;
+}
+
+input {
+    margin: 20px 4%;
+    border-radius: 7px;
+    padding: 7px;
+    background-color:#FC8AF4;
+    color:#1A377A;
+    font-weight: bold;
+    transition-duration: 0.1s;
+}
+
+input:hover {
+    color:#009161;
+    cursor: pointer;
+    background-color:#FFB5FA;
+    text-shadow: 3px 3px 3px rgb(175, 172, 172);
+    box-shadow: 5px 5px 7px rgb(175, 172, 172);
+}

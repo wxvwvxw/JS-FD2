@@ -37,8 +37,8 @@
         }
     }
     var drinkStorage = new HashStorage;
-    drinkStorage.addValue('tea','green tea, lemon, water');
-    console.log(drinkStorage.getValue('tea'));
+    drinkStorage.addValue('Чай', {'Алкогольный':'нет','Рецепт приготовления':'взять листья зеленого чая(1/3 ч.л.), лимон(1 дольку), натертый имбирь(1 гр.), поместить все это в чашку 350-400 мл, залить кипятком на 95%, накрыть блюдцем, дать завариться 5-10 мин. Готово!'});
+    document.write(drinkStorage.getValue('Чай'));
 
 /*
 N.13 Домашнее задание DRINKS_HASH
