@@ -23,5 +23,5 @@ input:hover {
     cursor: pointer;
     background-color:#FFB5FA;
     text-shadow: 3px 3px 3px rgb(175, 172, 172);
-    box-shadow: 5px 5px 7px rgb(175, 172, 172);
+    box-shadow: 5px 5px 7px rgb(175, 172, 172); 
 }

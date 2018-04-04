@@ -12,7 +12,7 @@
             return this.storage[key];
         }
         else {
-            return undefined;
+            return undefined; 
         }
     }
     HashStorage.prototype.deleteValue = function(key) {
