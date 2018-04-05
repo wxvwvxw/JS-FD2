@@ -37,7 +37,7 @@ function question() {
     var drinkRecipe = prompt('Рецепт напитка:');
     drinkStorage.addValue(drinkName, {'Алкогольный: ':drinkAlco,'Рецепт приготовления: ':drinkRecipe});
 }
-console.log(JSON.stringify.drinkStorage.getValue(drinkName));
+console.log(drinkStorage.getValue(drinkName));
 
 // var drinkStorage = new HashStorage;
 //     drinkStorage.addValue('Чай', {'Алкогольный':'нет','Рецепт приготовления':'взять листья зеленого чая(1/3 ч.л.), лимон(1 дольку), натертый имбирь(1 гр.), поместить все это в чашку 350-400 мл, залить кипятком на 95%, накрыть блюдцем, дать завариться 5-10 мин. Готово!'});
