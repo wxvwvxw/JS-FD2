@@ -28,7 +28,7 @@
         return Object.keys(this.storage);
     }
 
-    var drinkStorage = new HashStorage();
+    var drinkStorage = new HashStorage(); 
     var drinkName = null;
 
 function question() {
