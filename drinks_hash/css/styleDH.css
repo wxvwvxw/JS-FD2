@@ -9,9 +9,9 @@ div {
 }
 
 input {
-    margin: 20px 4%;
+    margin: 20px 6%;
     border-radius: 7px;
-    padding: 7px;
+    padding: 7px 15px;
     background-color:#FC8AF4;
     color:#1A377A;
     font-weight: bold;
