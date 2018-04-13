@@ -9,6 +9,7 @@
     }
     HashStorage.prototype.getValue = function(key) {
         if(key in this.storage) {
+            console.log('Напиток'+this.storage[key]);
             return this.storage[key];
         }
         else {
@@ -34,9 +35,37 @@ function question() {  // далее описываю функцию в кото
     var drinkName = prompt('Введите название напитка'); // создаю переменную для хранения названия напитка
     var drinkAlco = confirm('Напиток алкогольный?(Нажмите ОK если Да, иначе нажмите Отмена)'); //создаю переменную для хранения алкогольности/неалкогольности напитка
     var drinkRecipe = prompt('Рецепт напитка:'); //создаю переменную для хранения рецепта напитка
-    drinkStorage.addValue(drinkName, {'Алкогольный: ':drinkAlco,'Рецепт приготовления: ':drinkRecipe}); //в этой строке вызываю метод, который сохранит в хэш переданные два аргумента, название напитка и хэш с признаком алкогольности и рецептом
+    drinkStorage.addValue(drinkName, {alco:drinkAlco,recipe:drinkRecipe}); //в этой строке вызываю метод, который сохранит в хэш переданные два аргумента, название напитка и хэш с признаком алкогольности и рецептом
+    console.log('Напиток ' + drinkName + ' сохранен');
 }
-console.log(drinkStorage.getValue(drinkName)); //тут я пытаюсь вывести в консоль рецепт, указывая в предназначенном для этого методе имя напитка
+
+function getInfo() {
+    var drinkName = prompt('Введите название напитка');
+    if(drinkName in drinkStorage.storage) {
+        return console.log(drinkStorage.getValue(drinkName));
+    }
+    else {
+        return console.log('Такой напиток отсутствует в хранилище');
+    }
+}
+
+function deleteInfo() {
+    var drinkName3 = prompt('Введите название напитка');
+    if(drinkName3 in drinkStorage.storage) {
+        drinkStorage.deleteValue(drinkName3);
+        console.log('Информация о напитке ' + drinkName3 + ' была удалена');
+    }
+    else {
+        console.log('Напитка ' + drinkName3 + ' нет в хранилище');
+    }
+}
+
+function getDrinksInfo() {
+    console.log('Доступные напитки: ' + drinkStorage.getKeys());
+}
+
+
+//console.log(drinkStorage.getValue(drinkName)); //тут я пытаюсь вывести в консоль рецепт, указывая в предназначенном для этого методе имя напитка
 
 // var drinkStorage = new HashStorage;
 //     drinkStorage.addValue('Чай', {'Алкогольный':'нет','Рецепт приготовления':'взять листья зеленого чая(1/3 ч.л.), лимон(1 дольку), натертый имбирь(1 гр.), поместить все это в чашку 350-400 мл, залить кипятком на 95%, накрыть блюдцем, дать завариться 5-10 мин. Готово!'});
