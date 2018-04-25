@@ -9,7 +9,6 @@
     }
     HashStorage.prototype.getValue = function(key) {
         if(key in this.storage) {
-            console.log('Напиток'+this.storage[key]);
             return this.storage[key];
         }
         else {
@@ -35,15 +34,20 @@ function question() {  // далее описываю функцию в кото
     var drinkName = prompt('Введите название напитка'); // создаю переменную для хранения названия напитка
     var drinkAlco = confirm('Напиток алкогольный?(Нажмите ОK если Да, иначе нажмите Отмена)'); //создаю переменную для хранения алкогольности/неалкогольности напитка
     var drinkRecipe = prompt('Рецепт напитка:'); //создаю переменную для хранения рецепта напитка
-    drinkStorage.addValue(drinkName, {alco:drinkAlco,recipe:drinkRecipe}); //в этой строке вызываю метод, который сохранит в хэш переданные два аргумента, название напитка и хэш с признаком алкогольности и рецептом
+    var drinkInfo = {alco:drinkAlco,recipe:drinkRecipe};
+    drinkStorage.addValue(drinkName, drinkInfo); //в этой строке вызываю метод, который сохранит в хэш переданные два аргумента, название напитка и хэш с признаком алкогольности и рецептом
     console.log('Напиток ' + drinkName + ' сохранен');
 }
 
 function getInfo() {
     var drinkName = prompt('Введите название напитка');
+    var drinkInfo = drinkStorage.getValue(drinkName);
+    
     if(drinkName in drinkStorage.storage) {
-        return console.log(drinkStorage.getValue(drinkName));
-    }
+        var getAlc = (drinkInfo.alco==true) ? 'да' : 'нет';
+        return console.log('Напиток ' + drinkName + '\n Алкогольный: ' + getAlc + '\n Рецепт приготовления: ' + drinkInfo.recipe);
+}
+    
     else {
         return console.log('Такой напиток отсутствует в хранилище');
     }
