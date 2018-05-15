@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Проект для курса по Javascript</title>
+<link href='css/styleTenis.css' type='text/css' rel='stylesheet'>
+</head>
+<body>
+
+<div id='wrapper'>
+	<div id='gameName'><span id='name1'>virtual</span><span id='name2'>Tenis</span><span id='name3'>Plus </span> <span id='md'> &mdash;</span><span class='color1'> m</span><span class='color2'>i</span><span class='color3'>n</span><span class='color4'>i</span><span class='color5'>m</span><span class='color6'>a</span><span class='color7'>l</span><span class='color1'>i</span><span class='color2'>s</span><span class='color3'>m</span></div>
+    <div id='scoreNameWrapp'>
+        <div><input class='scorePlayers' type='text' name='scoreP1'> : <input class='scorePlayers' type='text' name='scoreP2'></div>
+    </div>
+      
+    <div id='field'>
+		<div id='player1'></div>
+		<div id='ball'></div>
+		<div id='player2'></div>
+    </div>
+    <div id='touchControl1'>
+        <div id='up1' class='controlButtons'>Up</div>
+        <div id='arrow1' class='controlButtons'><span class='arrow'>></span></div>
+        <div id='down1' class='controlButtons'>Down</div>
+    </div>
+    <div id='touchControl2'>
+        <div id='up2' class='controlButtons'>Up</div>
+        <div id='arrow2' class='controlButtons'><span class='arrow'><</span></div>
+        <div id='down2' class='controlButtons'>Down</div>
+    </div>
+
+</div>
+
+
+
+	<script>
+
+	'use strict';
+
+
+
+var up1Elem = document.getElementById('up1');
+up1Elem.addEventListener('mousedown',controlButtonFunction,false);
+up1Elem.addEventListener('mouseup',controlButtonFunction2,false);
+up1Elem.addEventListener('touchstart',controlButtonFunction,false);
+up1Elem.addEventListener('touchend',controlButtonFunction2,false);
+
+var up2Elem = document.getElementById('up2');
+up2Elem.addEventListener('mousedown',controlButtonFunction,false);
+up2Elem.addEventListener('mouseup',controlButtonFunction2,false);
+up2Elem.addEventListener('touchstart',controlButtonFunction,false);
+up2Elem.addEventListener('touchend',controlButtonFunction2,false);
+
+var arrow1Elem = document.getElementById('arrow1');
+arrow1Elem.addEventListener('mousedown',controlButtonFunction,false);
+arrow1Elem.addEventListener('mouseup',controlButtonFunction2,false);
+arrow1Elem.addEventListener('touchstart',controlButtonFunction,false);
+arrow1Elem.addEventListener('touchend',controlButtonFunction2,false);
+
+var arrow2Elem = document.getElementById('arrow2');
+arrow2Elem.addEventListener('mousedown',controlButtonFunction,false);
+arrow2Elem.addEventListener('mouseup',controlButtonFunction2,false);
+arrow2Elem.addEventListener('touchstart',controlButtonFunction,false);
+arrow2Elem.addEventListener('touchend',controlButtonFunction2,false);
+
+var down1Elem = document.getElementById('down1');
+down1Elem.addEventListener('mousedown',controlButtonFunction,false);
+down1Elem.addEventListener('mouseup',controlButtonFunction2,false);
+down1Elem.addEventListener('touchstart',controlButtonFunction,false);
+down1Elem.addEventListener('touchend',controlButtonFunction2,false);
+
+var down2Elem = document.getElementById('down2');
+down2Elem.addEventListener('mousedown',controlButtonFunction,false);
+down2Elem.addEventListener('mouseup',controlButtonFunction2,false);
+down2Elem.addEventListener('touchstart',controlButtonFunction,false);
+down2Elem.addEventListener('touchend',controlButtonFunction2,false);
+
+function controlButtonFunction(e) {
+    e=e||window.event;
+    this.style.opacity='0.5';
+    this.style.backgroundColor='#F45321';
+}
+
+function controlButtonFunction2(e) {
+    e=e||window.event;
+    this.style.opacity='0.8';
+    this.style.backgroundColor='';
+}
+
+	</script>
+</body>
+</html>

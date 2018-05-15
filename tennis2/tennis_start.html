@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Проект для курса по Javascript</title>
+<link href='css/styleTennis_start.css' type='text/css' rel='stylesheet'>
+</head>
+<body>
+
+<div id='wrapper'>
+	<div id='gameName'><span id='name1'>virtual</span><span id='name2'>Tenis</span><span id='name3'>Plus </span> <span id='md'> &mdash;</span><span class='color1'> m</span><span class='color2'>i</span><span class='color3'>n</span><span class='color4'>i</span><span class='color5'>m</span><span class='color6'>a</span><span class='color7'>l</span><span class='color1'>i</span><span class='color2'>s</span><span class='color3'>m</span></div>
+    <div id='playersName'>
+        <span id='playerColor1'>Player 1 name:</span> <input class='scorePlayers' type='text' name='player1Name' value='Player1'><span id='spaceName'>VS</span> <span id='playerColor2'>Player 2 name:</span> <input class='scorePlayers' type='text' name='player1Name' value='Player2'>
+    </div>
+    <div id='touchControl1'>
+        <div id='start' class='controlButtons'>START</div>
+    </div>
+ 
+</div>
+ 
+<script>
+
+    "use strict"
+
+var startElem = document.getElementById('start');
+startElem.addEventListener('mousedown',controlButtonFunction,false);
+startElem.addEventListener('mouseup',controlButtonFunction2,false);
+startElem.addEventListener('touchstart',controlButtonFunction,false);
+startElem.addEventListener('touchend',controlButtonFunction2,false);
+
+function controlButtonFunction(e) {
+    e=e||window.event;
+    this.style.opacity='0.5';
+    this.style.backgroundColor='#F45321';
+}
+
+function controlButtonFunction2(e) {
+    e=e||window.event;
+    this.style.opacity='0.8';
+    this.style.backgroundColor='';
+}
+
+</script>
+
+
+</body>
+</html>
